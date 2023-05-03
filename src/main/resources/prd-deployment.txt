@@ -1,0 +1,1066 @@
+Argo Notifications
+앱  07:45
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.3-a85edfa-230427.0741
+:흰색_확인_표시:
+1
+
+07:47
+Rollout amims-hdtv-admin-dp has been completed.
+amims-hdtv-admin-dp
+Strategy
+BlueGreen
+amims-hdtv-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-hdtv-admin:b7eab77-230426.2053
+07:48
+Rollout amims-system-admin-dp has been completed.
+amims-system-admin-dp
+Strategy
+BlueGreen
+amims-system-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-system-admin:3abc80e-230426.2047
+07:48
+Rollout amims-smartux-admin-dp has been completed.
+amims-smartux-admin-dp
+Strategy
+BlueGreen
+amims-smartux-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-smartux-admin:85ad0e1-230426.2048
+
+Argo Notifications
+앱  07:53
+Rollout amims-coupon-dp has been completed.
+amims-coupon-dp
+Strategy
+BlueGreen
+amims-coupon
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-coupon:e03e177-230426.2034
+07:58
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.3-d2430fe-230427.0753
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  08:26
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.4-0ef8670-230427.0821
+:흰색_확인_표시:
+1
+
+08:30
+Rollout bpas-schedule-agent-dp has been completed.
+bpas-schedule-agent-dp
+Strategy
+BlueGreen
+bpas-schedule-agent-bpas
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/bpas-schedule-agent:49e11c1-230427.0759
+:흰색_확인_표시:
+1
+
+08:30
+Rollout bpas-admin-dp has been completed.
+bpas-admin-dp
+Strategy
+BlueGreen
+bpas-admin-bpas
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/bpas-admin:19a0b29-230427.0751
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  08:44
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.5-e0e0d87-230427.0839
+:흰색_확인_표시:
+1
+
+08:47
+Rollout amims-system-admin-dp has been completed.
+amims-system-admin-dp
+Strategy
+BlueGreen
+amims-system-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-system-admin:d775933-230427.0842
+
+GitHub
+앱  08:47
+Pull request opened by Song-Joon-Young
+#279 apim & cms timeout 설정 추가
+Reviewers
+@mzmskim
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+1개의 댓글
+7일 전스레드 보기
+
+GitHub
+앱  08:47
+2 new commits pushed to main by mzmskim
+0a5911e0 - apim & cms timeout 설정 추가
+ed491b69 - Merge pull request #279 from LGUPLUS-IPTV-MSA/feature/coupon
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+
+GitHub
+앱  08:47
+스레드
+에 답글을 남김
+Pull request merged by mzmskim
+#279 apim & cms timeout 설정 추가
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+GitHub
+앱  08:47
+Deployment to production by mzmskim
+Status
+Completed
+Commit
+ed491b6 (main)
+Workflow
+Deploy to EFS for Production #265 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+Argo Notifications
+앱  08:53
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.6-2c62dba-230427.0848
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  09:07
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.7-e415c29-230427.0902
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  09:15
+Rollout payment-dp has been completed.
+payment-dp
+Strategy
+Canary
+payment-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/payment:1.0.0-3e95dcc-230427.0906
+:흰색_확인_표시:
+1
+
+09:18
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.8-963e8d5-230427.0914
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  10:15
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.2-5c3a2ed-230427.1006
+:흰색_확인_표시:
+1
+
+10:20
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.9-3efd6c6-230427.1015
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  10:38
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.10-53f6751-230427.1029
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  10:43
+Rollout payment-dp has been completed.
+payment-dp
+Strategy
+Canary
+payment-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/payment:1.0.1-4f7e402-230427.1037
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  11:20
+Pull request opened by LeeDongon
+#280 remove m_type!=5
+Reviewers
+@wen-ys
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+1개의 댓글
+6일 전스레드 보기
+
+Argo Notifications
+앱  11:55
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.10-ab4e891-230427.1150
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  12:04
+Rollout amims-system-admin-dp has been completed.
+amims-system-admin-dp
+Strategy
+BlueGreen
+amims-system-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-system-admin:59ab41c-230427.0904
+
+Argo Notifications
+앱  12:22
+Rollout amims-system-admin-dp has been completed.
+amims-system-admin-dp
+Strategy
+BlueGreen
+amims-system-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-system-admin:9fde4c5-230427.1219
+
+Argo Notifications
+앱  12:27
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.11-cbc1102-230427.1223
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  12:37
+Rollout payment-dp has been completed.
+payment-dp
+Strategy
+Canary
+payment-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/payment:1.0.1-7fb5364-230427.1223
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  12:46
+3 new commits pushed to main by LeeDongon
+310eadd7 - remove m_type!=5
+191985d5 - Merge branch 'main' into feature/bifrost
+616870bb - Merge pull request #280 from LGUPLUS-IPTV-MSA/feature/bifrost
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+
+GitHub
+앱  12:46
+스레드
+에 답글을 남김
+Pull request merged by LeeDongon
+#280 remove m_type!=5
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+GitHub
+앱  12:46
+Deployment to production by LeeDongon
+Status
+Completed
+Commit
+616870b (main)
+Workflow
+Deploy to EFS for Production #266 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 27일
+
+Argo Notifications
+앱  13:06
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.12-711cf46-230427.1302
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  14:09
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.13-482f98f-230427.1405
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  14:32
+Rollout personalization-dp has been completed.
+personalization-dp
+Strategy
+Canary
+personalization-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/personalization:1.2.9-a887813-230427.1401
+:+1::피부톤-4:
+1
+
+
+Argo Notifications
+앱  14:45
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.2-bd2ba8e-230427.1438
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  14:51
+Rollout vodlookup-dp has been completed.
+vodlookup-dp
+Strategy
+Canary
+vodlookup-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/vodlookup:1.2.18-197aeaf-230427.1445
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  14:58
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.2-5c3a2ed-230427.1006
+:흰색_확인_표시:
+1
+
+14:59
+Rollout payment-dp has been completed.
+payment-dp
+Strategy
+Canary
+payment-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/payment:1.0.1-c7f708a-230427.1447
+:흰색_확인_표시:
+1
+
+15:00
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.14-05cc086-230427.1455
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  15:12
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.15-ad7d62f-230427.1506
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  15:27
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.2-4bca726-230427.1520
+:흰색_확인_표시:
+1
+
+15:28
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.16-29ac697-230427.1523
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  16:18
+Rollout contents-dp has been completed.
+contents-dp
+Strategy
+Canary
+contents-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/contents:1.2.6-4a120f2-230427.1614
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  16:47
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.17-cf4861a-230427.1641
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  16:58
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.18-1b2f6ed-230427.1655
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  17:51
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.19-f497bcd-230427.1747
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  18:06
+Rollout contents-dp has been completed.
+contents-dp
+Strategy
+Canary
+contents-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/contents:1.2.6-84c2cd9-230427.1801
+:흰색_확인_표시:
+1
+
+18:06
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.20-7188d9e-230427.1759
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  18:20
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.21-d61705f-230427.1817
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  18:28
+Rollout amims-hdtv-admin-dp has been completed.
+amims-hdtv-admin-dp
+Strategy
+BlueGreen
+amims-hdtv-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-hdtv-admin:b55f9be-230427.1825
+:+1::피부톤-4:
+1
+
+
+Argo Notifications
+앱  18:33
+Rollout amims-hdtv-admin-dp has been completed.
+amims-hdtv-admin-dp
+Strategy
+BlueGreen
+amims-hdtv-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-hdtv-admin:2f758ce-230427.1831
+:+1::피부톤-4:
+1
+
+
+Argo Notifications
+앱  19:52
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.22-86a9e35-230427.1946
+:흰색_확인_표시:
+1
+
+---PLUS_DAY
+Argo Notifications
+앱  14:41
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.23-cfbebbd-230428.1339
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  15:50
+Rollout bpas-admin-dp has been completed.
+bpas-admin-dp
+Strategy
+BlueGreen
+bpas-admin-bpas
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/bpas-admin:d05eb8c-230427.1346
+
+GitHub
+앱  16:27
+Pull request opened by KimJiYeon-MZD
+#282 amims-coupon 대량쿠폰 임시디렉토리 추가
+Reviewers
+@LimJaejin
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 28일
+:+1::피부톤-4:
+1
+:두_눈:
+1
+:흰색_확인_표시:
+1
+
+
+1개의 댓글
+5일 전스레드 보기
+
+GitHub
+앱  16:27
+스레드
+에 답글을 남김
+Pull request merged by LimJaejin
+#282 amims-coupon 대량쿠폰 임시디렉토리 추가
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 28일
+
+GitHub
+앱  16:27
+2 new commits pushed to main by LimJaejin
+edaafc66 - amims-coupon 대량쿠폰 임시디렉토리 추가
+7e5f392e - Merge pull request #282 from LGUPLUS-IPTV-MSA/feature/amims
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+16:27
+Deployment to production by LimJaejin
+Status
+Completed
+Commit
+7e5f392 (main)
+Workflow
+Deploy to EFS for Production #267 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 28일
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  16:30
+Rollout bpas-admin-dp has been completed.
+bpas-admin-dp
+Strategy
+BlueGreen
+bpas-admin-bpas
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/bpas-admin:c22a445-230428.1601
+:흰색_확인_표시:
+1
+
+16:31
+Rollout amims-coupon-dp has been completed.
+amims-coupon-dp
+Strategy
+BlueGreen
+amims-coupon
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-coupon:37c941e-230428.1613
+:+1::피부톤-4:
+1
+
+
+Argo Notifications
+앱  16:36
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.24-bb7f2d9-230428.1630
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  17:16
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.23-cfbebbd-230428.1339
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  18:19
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.2-4687f46-230428.1812
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  18:35
+Rollout amims-hdtv-admin-dp has been completed.
+amims-hdtv-admin-dp
+Strategy
+BlueGreen
+amims-hdtv-admin
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-hdtv-admin:327a8b9-230428.1825
+:+1::피부톤-4:
+1
+
+
+Argo Notifications
+앱  18:48
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.25-38383c0-230428.1832
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  19:19
+Rollout channel-dp has been completed.
+channel-dp
+Strategy
+Canary
+channel-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/channel:1.2.6-cde6354-230428.1907
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  19:56
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.26-17d3a8b-230428.1944
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  20:12
+Rollout channel-dp has been completed.
+channel-dp
+Strategy
+Canary
+channel-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/channel:1.2.6-692bc34-230428.2008
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  20:28
+Rollout channel-dp has been completed.
+channel-dp
+Strategy
+Canary
+channel-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/channel:1.2.7-44118e8-230428.2025
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  21:19
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.25-38383c0-230428.1832
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  21:43
+Rollout channel-dp has been completed.
+channel-dp
+Strategy
+Canary
+channel-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/channel:1.2.8-eca2e0a-230428.2138
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  23:45
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.27-11faceb-230428.2256
+:흰색_확인_표시:
+1
+
+---PLUS_DAY
+Argo Notifications
+앱  22:55
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.28-4d414b9-230429.2154
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  23:08
+Pull request opened by LeeDongon
+#283 Add mobile cmd to iptv
+Reviewers
+@wen-ys
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 29일
+
+1개의 댓글
+4일 전스레드 보기
+
+GitHub
+앱  23:35
+4 new commits pushed to main by wen-ys
+9f70ac00 - Add getNXConStat
+31896340 - Update bifrost_watpur.yml
+b51a5368 - Add domain
+f3dce0fc - Merge pull request #283 from LGUPLUS-IPTV-MSA/feature/bifrost
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+
+GitHub
+앱  23:35
+스레드
+에 답글을 남김
+Pull request merged by wen-ys
+#283 Add mobile cmd to iptv
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 29일
+
+GitHub
+앱  23:35
+Deployment to production by wen-ys
+Status
+Completed
+Commit
+f3dce0f (main)
+Workflow
+Deploy to EFS for Production #268 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 4월 29일
+
+---PLUS_DAY
+Argo Notifications
+앱  00:56
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.29-8efc8cf-230430.0000
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  17:46
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.3-1ad02f6-230430.1738
+:흰색_확인_표시:
+1
+
+---PLUS_DAY
+Argo Notifications
+앱  21:15
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.4-0f81997-230501.2103
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  22:52
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.30-3ccbaa5-230501.2224
+:흰색_확인_표시:
+1
+
+---PLUS_DAY
+Argo Notifications
+앱  14:42
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.31-ae97987-230503.1257
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  15:05
+Pull request opened by im-daegeun-lgu
+#284 configlake shuttle 환경 구성
+• shuttle.yml은 pond 파일 복사
+• shuttle-prd.yml jdbc url 경로 prd로 변경
+• s3 bucket 정보 prd로 변경
+Reviewers
+@MooyongLee
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 15:05
+
+1개의 댓글
+오늘 15:26에스레드 보기
+
+Argo Notifications
+앱  15:13
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.5-3fd1bbd-230503.1503
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  15:26
+4 new commits pushed to main by MooyongLee
+b6585d33 - configlake shuttle 환경 구성
+2a7bea95 - configlake shuttle 수정
+eb6e102e - configlake shuttle 수정
+9b2f0ec3 - Merge pull request #284 from LGUPLUS-IPTV-MSA/feature/shuttle
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+
+GitHub
+앱  15:26
+스레드
+에 답글을 남김
+Pull request merged by MooyongLee
+#284 configlake shuttle 환경 구성
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 15:05
+
+GitHub
+앱  15:26
+Deployment to production by MooyongLee
+Status
+Completed
+Commit
+9b2f0ec (main)
+Workflow
+Deploy to EFS for Production #269 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 15:29
+
+GitHub
+앱  17:49
+Pull request opened by KimJiYeon-MZD
+#285 amims-coupon 쿠키 timeout 설정
+Reviewers
+@LimJaejin
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 17:49
+
+1개의 댓글
+오늘 17:50에스레드 보기
+
+GitHub
+앱  17:50
+2 new commits pushed to main by LimJaejin
+58091953 - amims-coupon 쿠키 timeout 설정
+037eb61c - Merge pull request #285 from LGUPLUS-IPTV-MSA/feature/amims
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake
+
+GitHub
+앱  17:50
+스레드
+에 답글을 남김
+Pull request merged by LimJaejin
+#285 amims-coupon 쿠키 timeout 설정
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 17:49
+
+GitHub
+앱  17:50
+Deployment to production by LimJaejin
+Status
+Completed
+Commit
+037eb61 (main)
+Workflow
+Deploy to EFS for Production #270 / Deploy-to-EFS
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 17:53
+
+Argo Notifications
+앱  17:55
+Rollout amims-coupon-dp has been completed.
+amims-coupon-dp
+Strategy
+BlueGreen
+amims-coupon
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-coupon:cefeae0-230503.1752
+:+1::피부톤-5:
+1
+
+
+
+
+
+
+
+Argo Notifications
+앱  20:12
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.31-123e23c-230503.1834
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  21:34
+Rollout amims-coupon-dp has been completed.
+amims-coupon-dp
+Strategy
+BlueGreen
+amims-coupon
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/amims-coupon:ef3b4e2-230503.2128
+:+1::피부톤-5:
+1
+
+21:36
+Rollout coupon-dp has been completed.
+coupon-dp
+Strategy
+Canary
+coupon-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/coupon:1.2.6-d8ba3a5-230503.2127
+:흰색_확인_표시:
+1
+
+
+---PLUS_DAY
+Argo Notifications
+앱  08:19
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.31-ae97987-230503.1257
+:흰색_확인_표시:
+1
+

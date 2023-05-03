@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FileSourceAnalyzerApplication {
+public class RolloutMessageAnalyzerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FileSourceAnalyzerApplication.class, args);
+        SpringApplication.run(RolloutMessageAnalyzerApplication.class, args);
     }
 
 }
