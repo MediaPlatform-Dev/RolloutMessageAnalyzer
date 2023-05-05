@@ -1,48 +1,40 @@
 package yamsroun.analyzer.rollout;
 
-import jakarta.annotation.PostConstruct;
-import org.springframework.core.io.ClassPathResource;
+import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import yamsroun.analyzer.rollout.analyzer.RolloutMessageAnalyzer;
+import yamsroun.analyzer.rollout.data.RolloutInfo;
+import yamsroun.analyzer.rollout.data.RolloutType;
 
-import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @Component
+@RequiredArgsConstructor
 public class RolloutMessageAnalyzerExecutor {
 
-    @PostConstruct
-    void init() throws IOException {
-        analyzeFileMessage();
-    }
+    private final RolloutMessageAnalyzer messageAnalyzer;
 
-    void analyzeFileMessage() throws IOException {
-        RolloutMessageAnalyzer messageAnalyzer = new RolloutMessageAnalyzer();
-        analyzeMessageOfFile(messageAnalyzer);
+    @EventListener(ApplicationReadyEvent.class)
+    public void analyzeAllMessage() {
+        messageAnalyzer.analyzeAllMessage();
         printResult(messageAnalyzer.getResult());
     }
 
-    private void analyzeMessageOfFile(RolloutMessageAnalyzer messageAnalyzer) throws IOException {
-        String readFile = "prd-deployment.txt";
-        File file = new ClassPathResource(readFile).getFile();
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                messageAnalyzer.analyzeMessage(line);
-            }
-            messageAnalyzer.done();
-        }
-    }
-
-    private void printResult(List<RolloutMessageAnalyzer.RolloutInfo> infos) {
+    private void printResult(List<RolloutInfo> infos) {
         Map<String, Integer> stats = new LinkedHashMap<>();
 
         infos.forEach(info -> {
-            String serviceName = info.serviceName();
+            String serviceName = String.format("%-20s", info.serviceName());
             LocalDateTime dateTime = info.rolloutDateTime();
+            String imageTag = String.format("%-30s", info.imageTag());
             String rolloutDateTime = dateTime.format(DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm"));
-            System.out.printf("%s - %s%n", serviceName, rolloutDateTime);
+            RolloutType rolloutType = info.rolloutType();
+            String addingInfo = rolloutType.isDefault() ? "" : " -> " + rolloutType;
+            System.out.printf("%s - %s:%s%s%n", rolloutDateTime, serviceName, imageTag, addingInfo);
 
             String date = dateTime.format(DateTimeFormatter.ofPattern("yyyy.MM.dd"));
             String dateAndServiceName = date + ", " + serviceName;

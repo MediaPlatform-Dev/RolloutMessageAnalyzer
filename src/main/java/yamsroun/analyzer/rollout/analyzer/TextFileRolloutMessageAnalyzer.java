@@ -1,31 +1,47 @@
-package yamsroun.analyzer.rollout;
+package yamsroun.analyzer.rollout.analyzer;
 
 import lombok.Getter;
+import yamsroun.analyzer.rollout.data.*;
+import yamsroun.analyzer.rollout.reader.MessageReader;
+import yamsroun.analyzer.rollout.reader.TextFileMessagerReader;
 
 import java.time.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
-class RolloutMessageAnalyzer {
+public class TextFileRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
 
     private static final String PLUS_DAY_MESSAGE = "---PLUS_DAY";
 
     @Getter
     private final List<RolloutInfo> result = new LinkedList<>();
 
-    private final ServiceNameImageBuildTime serviceNameImageBuildTime = new ServiceNameImageBuildTime();
+    private final ServiceImageBuildTimeTag serviceImageBuildTimeTag = new ServiceImageBuildTimeTag();
 
 
     private String currentMessage;
     private String serviceName;
+    private String imageTag;
     private LocalTime rolloutTime;
 
     private boolean first = true;
     private boolean foundService = false;
-    private boolean rollbackRollout = false;
+    private RolloutType rolloutType = RolloutType.DEPLOYMENT;
     private String prevMessage;
     private LocalDate currentDate = LocalDate.of(2023, Month.APRIL, 27);
 
-    public void analyzeMessage(String message) {
+
+    @Override
+    public void analyzeAllMessage() {
+        MessageReader messageReader = new TextFileMessagerReader();
+        String line;
+        while ((line = messageReader.read()) != null) {
+            analyzeMessage(line);
+        }
+        done();
+    }
+
+    private void analyzeMessage(String message) {
         currentMessage = message;
         if (isPlusDayMessage()) {
             setToNextDay();
@@ -33,8 +49,7 @@ class RolloutMessageAnalyzer {
         if (isRolloutMessage()) {
             addResult();
             setTime();
-            first = false;
-            foundService = false;
+            resetStatus();
         }
         if (isServiceNameMessage()) {
             setServiceName();
@@ -69,6 +84,12 @@ class RolloutMessageAnalyzer {
         rolloutTime = LocalTime.of(Integer.parseInt(hour), Integer.parseInt(minute));
     }
 
+    private void resetStatus() {
+        first = false;
+        foundService = false;
+        rolloutType = RolloutType.DEPLOYMENT;
+    }
+
     private boolean isServiceNameMessage() {
         return currentMessage.endsWith("-fleta");
     }
@@ -87,43 +108,28 @@ class RolloutMessageAnalyzer {
         if (!foundService) {
             return;
         }
-        String[] split = currentMessage.split("/", -1);
-        String imageTag = split[split.length - 1];
+        String[] split = currentMessage.split(":", -1);
+        imageTag = split[split.length - 1];
         int imageTagLength = imageTag.length();
         String buildTimeTag = imageTag.substring(imageTagLength - 11, imageTagLength);
 
-        String lastBuildTimeTag = serviceNameImageBuildTime.get(serviceName);
-        if (lastBuildTimeTag != null && lastBuildTimeTag.compareTo(buildTimeTag) > 0) {
-            rollbackRollout = true;
-            //TODO
-            System.out.printf(">>> %s ROLLBACK=%s -> %s%n", serviceName, lastBuildTimeTag, buildTimeTag);
+        String lastBuildTimeTag = serviceImageBuildTimeTag.getLastBuildTimeTag(serviceName);
+        if (lastBuildTimeTag != null) {
+            if (lastBuildTimeTag.compareTo(buildTimeTag) > 0) {
+                rolloutType = RolloutType.ROLLBACK;
+            } else if (serviceImageBuildTimeTag.existsBuildTimeTag(serviceName, buildTimeTag)) {
+                rolloutType = RolloutType.RE_DEPLOYMENT;
+            }
         }
-        serviceNameImageBuildTime.put(serviceName, buildTimeTag);
+        serviceImageBuildTimeTag.addBuildTimeTag(serviceName, buildTimeTag);
     }
 
     private void addResult() {
         if (first || !foundService) {
             return;
         }
-        result.add(new RolloutInfo(serviceName, LocalDateTime.of(currentDate, rolloutTime)));
+        result.add(new RolloutInfo(serviceName, LocalDateTime.of(currentDate, rolloutTime), imageTag, rolloutType));
     }
 
 
-    record RolloutInfo(String serviceName, LocalDateTime rolloutDateTime) {
-
-    }
-
-
-    static class ServiceNameImageBuildTime {
-
-        private final Map<String, String> map = new HashMap<>();
-
-        void put(String serviceName, String buildTime) {
-            map.put(serviceName, buildTime);
-        }
-
-        String get(String serviceName) {
-            return map.get(serviceName);
-        }
-    }
 }

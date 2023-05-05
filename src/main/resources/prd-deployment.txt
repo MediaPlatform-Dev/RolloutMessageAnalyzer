@@ -898,6 +898,7 @@ watpur-fleta
 1
 
 ---PLUS_DAY
+---PLUS_DAY
 Argo Notifications
 앱  14:42
 Rollout watpur-dp has been completed.
@@ -1013,11 +1014,6 @@ amims-coupon
 1
 
 
-
-
-
-
-
 Argo Notifications
 앱  20:12
 Rollout watpur-dp has been completed.
@@ -1061,6 +1057,38 @@ Strategy
 Canary
 watpur-fleta
 029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.31-ae97987-230503.1257
+:흰색_확인_표시:
+1
+
+
+Argo Notifications
+앱  09:24
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.31-123e23c-230503.1834
+:흰색_확인_표시:
+1
+
+
+GitHub
+앱  10:36
+Pull request opened by LeeDongon
+#286 sync pond
+Reviewers
+@LGUPLUS-IPTV-MSA/approve-leader
+<https://github.com/LGUPLUS-IPTV-MSA/configlake|LGUPLUS-IPTV-MSA/configlake>LGUPLUS-IPTV-MSA/configlake | 오늘 10:36
+
+Argo Notifications
+앱  16:02
+Rollout watpur-dp has been completed.
+watpur-dp
+Strategy
+Canary
+watpur-fleta
+029480618840.dkr.ecr.ap-northeast-2.amazonaws.com/watpur:1.1.32-f9bd628-230504.1340
 :흰색_확인_표시:
 1
 
