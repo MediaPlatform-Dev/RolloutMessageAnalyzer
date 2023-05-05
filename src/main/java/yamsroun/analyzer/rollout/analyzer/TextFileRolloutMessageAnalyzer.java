@@ -112,15 +112,7 @@ public class TextFileRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
         imageTag = split[split.length - 1];
         int imageTagLength = imageTag.length();
         String buildTimeTag = imageTag.substring(imageTagLength - 11, imageTagLength);
-
-        String lastBuildTimeTag = serviceImageBuildTimeTag.getLastBuildTimeTag(serviceName);
-        if (lastBuildTimeTag != null) {
-            if (lastBuildTimeTag.compareTo(buildTimeTag) > 0) {
-                rolloutType = RolloutType.ROLLBACK;
-            } else if (serviceImageBuildTimeTag.existsBuildTimeTag(serviceName, buildTimeTag)) {
-                rolloutType = RolloutType.RE_DEPLOYMENT;
-            }
-        }
+        rolloutType = serviceImageBuildTimeTag.getRolloutType(serviceName, buildTimeTag);
         serviceImageBuildTimeTag.addBuildTimeTag(serviceName, buildTimeTag);
     }
 
@@ -128,8 +120,8 @@ public class TextFileRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
         if (first || !foundService) {
             return;
         }
-        result.add(new RolloutInfo(serviceName, LocalDateTime.of(currentDate, rolloutTime), imageTag, rolloutType));
+        LocalDateTime rolloutDateTime = LocalDateTime.of(currentDate, rolloutTime);
+        result.add(new RolloutInfo(serviceName, rolloutDateTime, imageTag, rolloutType));
     }
-
 
 }

@@ -27,4 +27,16 @@ public class ServiceImageBuildTimeTag {
         }
         return buildTimeTags.contains(buildTime);
     }
+
+    public RolloutType getRolloutType(String serviceName, String buildTimeTag) {
+        String lastBuildTimeTag = getLastBuildTimeTag(serviceName);
+        if (lastBuildTimeTag != null) {
+            if (lastBuildTimeTag.compareTo(buildTimeTag) > 0) {
+                return RolloutType.ROLLBACK;
+            } else if (existsBuildTimeTag(serviceName, buildTimeTag)) {
+                return RolloutType.RE_DEPLOYMENT;
+            }
+        }
+        return RolloutType.getDefalut();
+    }
 }
