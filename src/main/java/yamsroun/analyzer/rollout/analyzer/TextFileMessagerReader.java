@@ -1,11 +1,11 @@
-package yamsroun.analyzer.rollout.reader;
+package yamsroun.analyzer.rollout.analyzer;
 
 import jakarta.annotation.PreDestroy;
 import org.springframework.core.io.ClassPathResource;
 
 import java.io.*;
 
-public class TextFileMessagerReader implements MessageReader {
+public class TextFileMessagerReader {
 
     private final BufferedReader reader;
 
@@ -19,7 +19,6 @@ public class TextFileMessagerReader implements MessageReader {
         }
     }
 
-    @Override
     public String read() {
         try {
             return reader.readLine();

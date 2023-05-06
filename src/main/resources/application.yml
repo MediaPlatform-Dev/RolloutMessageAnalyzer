@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          slack:
+            url: ${service.slack.host}
+            logger-level: full
+
+logging:
+  level:
+    yamsroun.analyzer: DEBUG
+
+service:
+  slack:
+    host: https://slack.com
+    token: __FROM_ENVIRONMENT__
+    channel: C03A1230Z7Z
+

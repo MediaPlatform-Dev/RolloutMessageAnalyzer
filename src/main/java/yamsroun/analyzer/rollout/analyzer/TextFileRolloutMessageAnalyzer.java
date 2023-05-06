@@ -2,8 +2,6 @@ package yamsroun.analyzer.rollout.analyzer;
 
 import lombok.Getter;
 import yamsroun.analyzer.rollout.data.*;
-import yamsroun.analyzer.rollout.reader.MessageReader;
-import yamsroun.analyzer.rollout.reader.TextFileMessagerReader;
 
 import java.time.*;
 import java.util.LinkedList;
@@ -33,7 +31,7 @@ public class TextFileRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
 
     @Override
     public void analyzeAllMessage() {
-        MessageReader messageReader = new TextFileMessagerReader();
+        TextFileMessagerReader messageReader = new TextFileMessagerReader();
         String line;
         while ((line = messageReader.read()) != null) {
             analyzeMessage(line);

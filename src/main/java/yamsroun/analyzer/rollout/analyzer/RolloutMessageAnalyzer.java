@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface RolloutMessageAnalyzer {
 
-    public void analyzeAllMessage();
+    void analyzeAllMessage();
 
-    public List<RolloutInfo> getResult();
+    List<RolloutInfo> getResult();
 }

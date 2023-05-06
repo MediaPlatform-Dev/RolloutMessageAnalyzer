@@ -21,13 +21,14 @@ public class RolloutMessageAnalyzerExecutor {
     @EventListener(ApplicationReadyEvent.class)
     public void analyzeAllMessage() {
         messageAnalyzer.analyzeAllMessage();
-        printResult(messageAnalyzer.getResult());
+        printResult();
     }
 
-    private void printResult(List<RolloutInfo> infos) {
+    private void printResult() {
+        List<RolloutInfo> result = messageAnalyzer.getResult();
         Map<String, Integer> stats = new LinkedHashMap<>();
 
-        infos.forEach(info -> {
+        result.forEach(info -> {
             String serviceName = String.format("%-20s", info.serviceName());
             LocalDateTime dateTime = info.rolloutDateTime();
             String imageTag = String.format("%-30s", info.imageTag());
