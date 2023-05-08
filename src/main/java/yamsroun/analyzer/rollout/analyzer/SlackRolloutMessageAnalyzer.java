@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import yamsroun.analyzer.client.SlackFeignClient;
 import yamsroun.analyzer.client.data.SlackApiResponse;
 import yamsroun.analyzer.client.data.SlackMessage;
-import yamsroun.analyzer.config.property.TargetServiceProperties;
 import yamsroun.analyzer.rollout.data.*;
 
 import java.time.Instant;
@@ -15,7 +14,6 @@ import java.util.*;
 @RequiredArgsConstructor
 public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
 
-    private final TargetServiceProperties serviceProperties;
     private final SlackFeignClient slackFeignClient;
 
     @Getter
@@ -25,10 +23,7 @@ public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
 
     @Override
     public void analyzeAllMessage() {
-        String channel = serviceProperties.slack().channel();
-        String oldest = serviceProperties.slack().history().oldest();
-        int limit = serviceProperties.slack().history().limit();
-        SlackApiResponse response = slackFeignClient.getConversationsHistory(channel, oldest, limit);
+        SlackApiResponse response = slackFeignClient.getConversationsHistory();
         List<SlackMessage> messages = response.messages();
         Collections.reverse(messages);
 
