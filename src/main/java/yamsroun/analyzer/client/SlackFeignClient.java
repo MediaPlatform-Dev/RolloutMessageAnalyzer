@@ -9,6 +9,10 @@ import yamsroun.analyzer.client.data.SlackApiResponse;
 @FeignClient(name = "slack", configuration = {SlackRequestInterceptorConfig.class})
 public interface SlackFeignClient {
 
-    @GetMapping(path = "/api/conversations.history?channel={channelId}&oldest=1682547600.000000&limit=500")
-    SlackApiResponse getConversationsHistory(@RequestParam String channelId);
+    @GetMapping(path = "/api/conversations.history?channel={channelId}&oldest={oldest}&limit={limit}")
+    SlackApiResponse getConversationsHistory(
+        @RequestParam String channelId,
+        @RequestParam String oldest,
+        @RequestParam int limit
+    );
 }

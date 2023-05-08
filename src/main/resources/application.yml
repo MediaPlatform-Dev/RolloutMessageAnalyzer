@@ -5,7 +5,7 @@ spring:
         config:
           slack:
             url: ${service.slack.host}
-            logger-level: full
+            #logger-level: full
 
 logging:
   level:
@@ -16,4 +16,7 @@ service:
     host: https://slack.com
     token: __FROM_ENVIRONMENT__
     channel: C03A1230Z7Z
+    history:
+      oldest: "1682547600.000000"
+      limit: 500
 

@@ -1,17 +1,19 @@
 package yamsroun.analyzer.client.data;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 //@JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 public record SlackMessage(
-    String bot_id,
+    @JsonProperty("bot_id") String botId,
     String type,
     String text,
     String user,
     String ts,
-    String appId,
+    @JsonProperty("app_id") String appId,
     String team,
-    BotProfile botProfile,
+    @JsonProperty("bot_profile") BotProfile botProfile,
     List<Attachment> attachments
 ) {
 
