@@ -2,6 +2,7 @@ package yamsroun.analyzer.rollout.analyzer;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.util.StringUtils;
 import yamsroun.analyzer.client.SlackFeignClient;
 import yamsroun.analyzer.client.data.SlackApiResponse;
 import yamsroun.analyzer.client.data.SlackMessage;
@@ -10,9 +11,13 @@ import yamsroun.analyzer.rollout.data.*;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @RequiredArgsConstructor
 public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
+
+    private static final Pattern IMAGE_TAG_LINK_PATTERN = Pattern.compile("<http://(.*)/(?<serviceName>.*):(?<imageTag>.*)>");
 
     private final SlackFeignClient slackFeignClient;
 
@@ -35,32 +40,29 @@ public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
                     .forEach(a -> a.fields()
                         .stream()
                         .filter(this::isImageTagField)
-                        .forEach(field -> parseFieldAndAddResult(rolloutDateTime, field)));
+                        .forEach(field -> parseFieldAndAddResult(field, rolloutDateTime)));
 
             });
     }
 
-    private boolean isImageTagField(SlackMessage.Attachment.Field f) {
-        return f.title().endsWith("-fleta");
+    private boolean isImageTagField(SlackMessage.Attachment.Field field) {
+        //return field.title().endsWith("-fleta");
+        return !field.title().equals("Strategy");
     }
 
-    private void parseFieldAndAddResult(LocalDateTime rolloutDateTime, SlackMessage.Attachment.Field field) {
-        RolloutType rolloutType = null;
-
+    private void parseFieldAndAddResult(SlackMessage.Attachment.Field field, LocalDateTime rolloutDateTime) {
         String imageTagLink = field.value();
-        String[] imageTagLinkSplit = imageTagLink.split("/", -1);
-        String serviceNameAndImageTag = imageTagLinkSplit[imageTagLinkSplit.length - 1];
-        serviceNameAndImageTag = serviceNameAndImageTag.substring(0, serviceNameAndImageTag.length() - 1);
-        String[] serviceNameAndImageTagSplit = serviceNameAndImageTag.split(":", -1);
-        String serviceName = serviceNameAndImageTagSplit[0];
-        String imageTag = serviceNameAndImageTagSplit[1];
-        int imageTagLength = imageTag.length();
-        String buildTimeTag = imageTag.substring(imageTagLength - 11, imageTagLength);
-        rolloutType = serviceImageBuildTimeTag.getRolloutType(serviceName, buildTimeTag);
-        serviceImageBuildTimeTag.addBuildTimeTag(serviceName, buildTimeTag);
+        Matcher matcher = IMAGE_TAG_LINK_PATTERN.matcher(imageTagLink);
+        if (matcher.matches()) {
+            String serviceName = matcher.group("serviceName");
+            String imageTag = matcher.group("imageTag");
+            String buildTimeTag = imageTag.substring(imageTag.length() - 11);
 
-        if (serviceName != null) {
-            result.add(new RolloutInfo(serviceName, rolloutDateTime, imageTag, rolloutType));
+            if (StringUtils.hasText(serviceName)) {
+                RolloutType rolloutType = serviceImageBuildTimeTag.getRolloutType(serviceName, buildTimeTag);
+                serviceImageBuildTimeTag.addBuildTimeTag(serviceName, buildTimeTag);
+                result.add(new RolloutInfo(serviceName, rolloutDateTime, imageTag, rolloutType));
+            }
         }
     }
 

@@ -22,10 +22,8 @@ public class SlackRequestInterceptorConfig {
             "limit", List.of(String.valueOf(serviceProperties.slack().history().limit()))
         );
 
-        return requestTemplate -> {
-            requestTemplate
-                .header(HttpHeaders.AUTHORIZATION, token)
-                .queries(queries);
-        };
+        return requestTemplate -> requestTemplate
+            .header(HttpHeaders.AUTHORIZATION, token)
+            .queries(queries);
     }
 }
