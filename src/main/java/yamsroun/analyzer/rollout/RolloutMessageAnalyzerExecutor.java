@@ -11,9 +11,7 @@ import yamsroun.analyzer.rollout.data.RolloutType;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Component
 @RequiredArgsConstructor
@@ -29,7 +27,8 @@ public class RolloutMessageAnalyzerExecutor {
 
     private void printResult() {
         List<RolloutInfo> result = messageAnalyzer.getResult();
-        Map<DateAndServiceName, Integer> stats = new LinkedHashMap<>();
+        Map<DateAndServiceName, Integer> stats1 = new LinkedHashMap<>();
+        Map<String, Integer> stats2 = new HashMap<>();
 
         result.forEach(info -> {
             String serviceName = info.serviceName();
@@ -41,16 +40,25 @@ public class RolloutMessageAnalyzerExecutor {
             System.out.printf("%s - %-20s:%30s%s%n", rolloutDateTime, serviceName, imageTag, addingInfo);
 
             DateAndServiceName dateAndServiceName = new DateAndServiceName(dateTime.toLocalDate(), serviceName);
-            stats.putIfAbsent(dateAndServiceName, 0);
-            Integer count = stats.get(dateAndServiceName);
-            stats.put(dateAndServiceName, ++count);
+            stats1.putIfAbsent(dateAndServiceName, 0);
+            Integer count1 = stats1.get(dateAndServiceName);
+            stats1.put(dateAndServiceName, ++count1);
+
+            stats2.putIfAbsent(serviceName, 0);
+            Integer count2 = stats2.get(serviceName);
+            stats2.put(serviceName, ++count2);
         });
 
         System.out.println("------------------------------");
-        stats.forEach((dateAndServiceName, count) -> {
+        stats1.forEach((dateAndServiceName, count) -> {
             LocalDate date = dateAndServiceName.date();
             String serviceName = dateAndServiceName.serviceName();
             System.out.printf("%s, %-20s, %d%n", date, serviceName, count);
+        });
+
+        System.out.println("------------------------------");
+        stats2.forEach((serviceName, count) -> {
+            System.out.printf("%-20s, %d%n", serviceName, count);
         });
     }
 
