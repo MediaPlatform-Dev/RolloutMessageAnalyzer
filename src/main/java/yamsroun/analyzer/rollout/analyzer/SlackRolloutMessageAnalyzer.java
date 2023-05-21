@@ -33,19 +33,19 @@ public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
         Collections.reverse(messages);
 
         messages.stream()
-            .filter(this::isArgoNotificationMessage)
+            .filter(SlackRolloutMessageAnalyzer::isArgoNotificationMessage)
             .forEach(msg -> {
                 LocalDateTime rolloutDateTime = getRolloutDateTime(msg.ts());
                 msg.attachments()
                     .forEach(a -> a.fields()
                         .stream()
-                        .filter(this::isImageTagField)
+                        .filter(SlackRolloutMessageAnalyzer::isImageTagField)
                         .forEach(field -> parseFieldAndAddResult(field, rolloutDateTime)));
 
             });
     }
 
-    private boolean isImageTagField(SlackMessage.Attachment.Field field) {
+    private static boolean isImageTagField(SlackMessage.Attachment.Field field) {
         //return field.title().endsWith("-fleta");
         return !field.title().equals("Strategy");
     }
@@ -56,7 +56,7 @@ public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
         if (matcher.matches()) {
             String serviceName = matcher.group("serviceName");
             String imageTag = matcher.group("imageTag");
-            String buildTimeTag = imageTag.substring(imageTag.length() - 11);
+            String buildTimeTag = getBuildTimeTag(imageTag);
 
             if (StringUtils.hasText(serviceName)) {
                 RolloutType rolloutType = serviceImageBuildTimeTag.getRolloutType(serviceName, buildTimeTag);
@@ -66,11 +66,18 @@ public class SlackRolloutMessageAnalyzer implements RolloutMessageAnalyzer {
         }
     }
 
-    private boolean isArgoNotificationMessage(SlackMessage msg) {
+    private static String getBuildTimeTag(String imageTag) {
+        if (imageTag.startsWith("v")) {
+            return imageTag.substring(1, 12);
+        }
+        return imageTag.substring(imageTag.length() - 11);
+    }
+
+    private static boolean isArgoNotificationMessage(SlackMessage msg) {
         return msg.botProfile() != null && msg.botProfile().name().equals("Argo Notifications");
     }
 
-    private LocalDateTime getRolloutDateTime(String timestampMillis) {
+    private static LocalDateTime getRolloutDateTime(String timestampMillis) {
         String[] timestampSplit = timestampMillis.split("\\.", -1);
         long timestamp = Long.parseLong(timestampSplit[0] + "000");
         return LocalDateTime.ofInstant(Instant.ofEpochMilli(timestamp), TimeZone.getDefault().toZoneId());

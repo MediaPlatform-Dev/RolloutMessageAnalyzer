@@ -37,7 +37,7 @@ public class RolloutMessageAnalyzerExecutor {
             String rolloutDateTime = dateTime.format(DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm"));
             RolloutType rolloutType = info.rolloutType();
             String addingInfo = rolloutType.isDefault() ? "" : " -> " + rolloutType;
-            System.out.printf("%s - %-20s:%30s%s%n", rolloutDateTime, serviceName, imageTag, addingInfo);
+            System.out.printf("%s - %-26s:%30s%s%n", rolloutDateTime, serviceName, imageTag, addingInfo);
 
             DateAndServiceName dateAndServiceName = new DateAndServiceName(dateTime.toLocalDate(), serviceName);
             stats1.putIfAbsent(dateAndServiceName, 0);
@@ -53,12 +53,12 @@ public class RolloutMessageAnalyzerExecutor {
         stats1.forEach((dateAndServiceName, count) -> {
             LocalDate date = dateAndServiceName.date();
             String serviceName = dateAndServiceName.serviceName();
-            System.out.printf("%s, %-20s, %d%n", date, serviceName, count);
+            System.out.printf("%s, %-26s, %d%n", date, serviceName, count);
         });
 
         System.out.println("------------------------------");
         stats2.forEach((serviceName, count) -> {
-            System.out.printf("%-20s, %d%n", serviceName, count);
+            System.out.printf("%-26s, %d%n", serviceName, count);
         });
     }
 
