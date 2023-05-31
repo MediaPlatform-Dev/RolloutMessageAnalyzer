@@ -15,7 +15,8 @@ service:
   slack:
     host: https://slack.com
     token: __FROM_ENVIRONMENT__
-    channel: C03A1230Z7Z
+    channel: C03A1230Z7Z #prd-deployment
+    #channel: C03B6LSEH9D #shd-deployment
     history:
       oldest: "1682547600.000000"
       limit: 500
